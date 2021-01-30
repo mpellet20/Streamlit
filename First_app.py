@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-s.t.write("Here's our first attempt at using data to create a table :")
+st.write("Here's our first attempt at using data to create a table :")
 st.write(pd.DataFrame({
       'First Column':[1, 2, 3, 4],
       'Second Column':[10, 20, 30, 40]

@@ -10,7 +10,7 @@ st.write(pd.DataFrame({
       }))
       
 chart.data = pd.DataFrame(
-         np.random.eandn(20, 3),
+         np.random.randn(20, 3),
          columns=['a', 'b', 'c'])
          
 st.line_chart(chart_data)

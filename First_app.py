@@ -11,12 +11,12 @@ st.write(pd.DataFrame({
       
 chart.data = pd.DataFrame(
          np.random.randn(20, 3),
-         column=['a', 'b', 'c'])
+         columns=['a', 'b', 'c'])
          
 st.line_chart(chart_data)
 
 map_data = pd.DataFrame(
        np.random.randn(1000, 2) / [50, 50] + [37.76, -112.4],
-       column=['lat', 'lon'])
+       columns=['lat', 'lon'])
        
 st.map(map_data)       

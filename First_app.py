@@ -9,7 +9,7 @@ st.write(pd.DataFrame({
       'Second Column':[10, 20, 30, 40]
       }))
       
-chart.data = pd.DataFrame(
+chart_data = pd.DataFrame(
          np.random.randn(20, 3),
          columns=['a', 'b', 'c'])
          

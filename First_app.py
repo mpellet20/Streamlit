@@ -3,20 +3,24 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-st.write("Here's our first attempt at using data to create a table :")
-st.write(pd.DataFrame({
-      'First Column':[1, 2, 3, 4],
-      'Second Column':[10, 20, 30, 40]
-      }))
-      
-chart_data = pd.DataFrame(
-         np.random.randn(20, 3),
-         columns=['a', 'b', 'c'])
-         
-st.line_chart(chart_data)
+wind_data = pd.read_csv('wtg01.csv', names=['Date', 'Time', 'AC_POWER', 'WIND_SPEED'])
 
-map_data = pd.DataFrame(
-       np.random.randn(1000, 2) / [50, 50] + [37.76, -112.4],
-       columns=['lat', 'lon'])
-       
-st.map(map_data)       
+st.title('Data on Wind Power and Wind speed')
+
+st.write("Here's the table related to the wind power:")
+
+st.write(wind_data)
+
+st.title('Here is the table of the Wind Speed related to the Wind Power')
+
+st.write(wind_data.groupby('AC_POWER').WIND_SPEED.sum())
+
+st.title('Here is the table of the wind speed related to the date')
+
+st.write(wind_data.groupby('Date').WIND_SPEED.sum())
+
+chart_data = wind_data.groupby('Date').WIND_SPEED.sum()
+
+st.title('Here is the graphic of the wind speed related to the date')
+
+st.line_chart(chart_data)

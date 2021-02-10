@@ -3,7 +3,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-wind_data = pd.read_csv('WTG01.csv', names=['Date', 'Time', 'AC_POWER', 'WIND_SPEED'])
+wind_data = pd.read_csv('WTG01.csv')
+#, names=['Date', 'Time', 'AC_POWER', 'WIND_SPEED'])
 
 st.title('Data on Wind Power and Wind speed')
 

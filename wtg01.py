@@ -8,7 +8,7 @@ Created on Tue Feb  9 16:55:08 2021
 
 import pandas as pd
 
-wind_data = pd.read_csv('wtg01.csv', names=['Date','Time','AC_POWER','WIND_SPEED'])
+wind_data = pd.read_csv('https://share.streamlit.io/mpellet20/streamlit/main/wtg01.csv', names=['Date','Time','AC_POWER','WIND_SPEED'])
 
 #print(wind_data)
 

@@ -11,11 +11,11 @@ st.write("Here's the table related to the wind power:")
 
 st.write(wind_data)
 
-st.title('Here is the table of the Wind Speed related to the Wind Power')
+st.write('Here is the table of the Wind Speed related to the Wind Power')
 
 st.write(wind_data.groupby('AC_POWER').WIND_SPEED.sum())
 
-st.title('Here is the table of the wind speed related to the date')
+st.write('Here is the table of the wind speed related to the date')
 
 st.write(wind_data.groupby('Date').WIND_SPEED.sum())
 

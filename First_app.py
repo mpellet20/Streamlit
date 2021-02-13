@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-@st.cache
+@st.cache(persist=TRUE)
 wind_data = pd.read_csv('WTG01.csv')
 #, names=['Date', 'Time', 'AC_POWER', 'WIND_SPEED'])
 

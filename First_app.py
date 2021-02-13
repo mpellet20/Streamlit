@@ -20,8 +20,10 @@ st.write('Here is the table of the wind speed related to the date')
 
 st.write(wind_data.groupby('Date').WIND_SPEED.sum())
 
-#chart_data = wind_data.groupby('Date').WIND_SPEED.sum()
+wind_data = pd.read_csv('WTG02.csv')
 
-#st.title('Here is the graphic of the wind speed related to the date')
+chart_data = wind_data.groupby('Date').WIND_SPEED.sum()
 
-#st.line_chart(chart_data)
+st.title('Here is the graphic of the wind speed related to the date')
+
+st.line_chart(chart_data)

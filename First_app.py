@@ -8,7 +8,7 @@ wind_data = pd.read_csv('WTG01.csv')
 
 #wind_speed_sd = st.slider('WIND_SPEED', 0, 23, 10)
 wind_speed = 6
-wind_data = wind_data[wind_speed]
+wind_data = wind_data[WIND_SPEED] == wind_speed
 'data', wind_data
 
 

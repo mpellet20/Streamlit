@@ -39,9 +39,3 @@ st.write(wind_data)
 
 #st.write(wind_data.groupby('Date').WIND_SPEED.sum())
 
-chart_data = wind_data.groupby('WIND_SPEED').AC_POWER.sum()
-
-st.title('Here is the graphic of the AC_POWER related to the wind speed')
-
-st.line_chart(chart_data)
-

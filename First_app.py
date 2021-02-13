@@ -18,8 +18,9 @@ st.line_chart(chart_data)
 
 if st.checkbox('Show Raw Data'):
     wind_data = load_data(10000)
-    wind_speed = st.slider('WIND_SPEED', 0, 23, 1)
-    wind_data['WIND_SPEED'] = wind_speed
+    #wind_speed = st.slider('WIND_SPEED', 0, 23, 1)
+    wind_date = st.slider('Date', '01/01/21', '23/01/2021',1)
+    wind_data['Date'] = wind_date
     
     st.title('Data on Wind Power and Wind speed')
     st.write("Here's the data table: ")

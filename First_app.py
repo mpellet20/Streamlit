@@ -5,6 +5,10 @@ import pandas as pd
 
 #@st.cache(persist=TRUE)
 wind_data = pd.read_csv('WTG01.csv')
+
+wind_speed = st.slider('WIND_SPEED', 0, 23, 10)
+wind_data = wind_data[wind_data[WIND_SPEED].dt.wind_speed == wind_speed]
+
 #, names=['Date', 'Time', 'AC_POWER', 'WIND_SPEED'])
 
 

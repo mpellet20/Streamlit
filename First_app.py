@@ -4,7 +4,9 @@ import numpy as np
 import pandas as pd
 
 #@st.cache(persist=TRUE)
-wind_data = pd.read_csv('WTG01.csv')
+def load_data(nrows)
+    wind_data = pd.read_csv('WTG01.csv', nrows=nrows)
+    return data
 
 #wind_speed_sd = st.slider('WIND_SPEED', 0, 23, 10)
 wind_speed = 6

@@ -11,7 +11,7 @@ def load_data(nrows):
 wind_data = load_data(10000)
 wind_speed = st.slider('WIND_SPEED', 0, 13, 2)
 wind_data['WIND_SPEED'] = wind_speed
-'data', wind_data
+
 
 
 #wind_data = wind_data.wind_speed == wind_speed]
@@ -32,6 +32,8 @@ st.write(wind_data)
 #st.write('Here is the table of the wind speed related to the date')
 
 #st.write(wind_data.groupby('Date').WIND_SPEED.sum())
+
+wind_data = load_data(100000)
 
 chart_data = wind_data.groupby('WIND_SPEED').AC_POWER.sum()
 

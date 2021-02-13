@@ -9,7 +9,7 @@ def load_data(nrows):
     return wind_data
 
 wind_data = load_data(10000)
-wind_speed = 6
+wind_speed = 11
 wind_data['WIND_SPEED'] = wind_speed
 'data', wind_data
 

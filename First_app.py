@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 #@st.cache(persist=TRUE)
-def load_data(nrows)
+def load_data(nrows):
     wind_data = pd.read_csv('WTG01.csv', nrows=nrows)
     return data
 

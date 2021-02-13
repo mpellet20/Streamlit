@@ -12,7 +12,7 @@ def load_data(nrows):
 #wind_speed_sd = st.slider('WIND_SPEED', 0, 23, 10)
 wind_speed = 6
 #wind_data = wind_data[3] == wind_speed
-wind_data = load_data(100)
+wind_data = load_data(10000)
 'data', wind_data
 
 

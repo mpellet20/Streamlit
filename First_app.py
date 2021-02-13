@@ -19,6 +19,12 @@ def load_data(nrows):
 #, names=['Date', 'Time', 'AC_POWER', 'WIND_SPEED'])
 wind_data = load_data(3170)
 
+chart_data = wind_data.groupby('WIND_SPEED').AC_POWER.sum()
+
+st.title('Here is the graphic of the AC_POWER related to the wind speed')
+
+st.line_chart(chart_data)
+
 st.title('Data on Wind Power and Wind speed')
 
 st.write("Here's the data table: ")

@@ -24,6 +24,6 @@ wind_data = pd.read_csv('WTG01.csv')
 
 chart_data = wind_data.groupby('WIND_SPEED').AC_POWER.sum()
 
-st.title('Here is the graphic of the wind speed related to the date')
+st.title('Here is the graphic of the AC_POWER related to the wind speed')
 
 st.line_chart(chart_data)

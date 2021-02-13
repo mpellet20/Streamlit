@@ -17,8 +17,7 @@ def load_data(nrows):
 #wind_data = wind_data.wind_speed == wind_speed]
 
 #, names=['Date', 'Time', 'AC_POWER', 'WIND_SPEED'])
-wind_data = pd.read_csv('WTG01.csv')
-#= load_data(100000)
+wind_data = load_data(3170)
 
 st.title('Data on Wind Power and Wind speed')
 

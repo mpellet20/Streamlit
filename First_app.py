@@ -6,10 +6,10 @@ import pandas as pd
 #@st.cache(persist=TRUE)
 def load_data(nrows):
     wind_data = pd.read_csv('WTG01.csv', nrows=nrows)
-    #wind_data['WIND_SPEED'] = 6
     return wind_data
 
 wind_data = load_data(10000)
+wind_data['WIND_SPEED'] = 6
 'data', wind_data
 
 

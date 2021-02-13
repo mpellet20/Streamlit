@@ -8,9 +8,9 @@ def load_data(nrows):
     wind_data = pd.read_csv('WTG01.csv', nrows=nrows)
     return wind_data
 
-wind_data = load_data(10000)
-wind_speed = st.slider('WIND_SPEED', 0, 13, 2)
-wind_data['WIND_SPEED'] = wind_speed
+#wind_data = load_data(10000)
+#wind_speed = st.slider('WIND_SPEED', 0, 13, 2)
+#wind_data['WIND_SPEED'] = wind_speed
 
 
 

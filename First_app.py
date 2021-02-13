@@ -33,7 +33,7 @@ st.write(wind_data)
 
 #st.write(wind_data.groupby('Date').WIND_SPEED.sum())
 
-wind_data 
+wind_data = pd.read_csv('WTG01.csv')
 #= load_data(100000)
 
 chart_data = wind_data.groupby('WIND_SPEED').AC_POWER.sum()

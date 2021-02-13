@@ -6,7 +6,7 @@ import pandas as pd
 #@st.cache(persist=TRUE)
 def load_data(nrows):
     wind_data = pd.read_csv('WTG01.csv', nrows=nrows)
-    return data
+    return wind_data
 
 #wind_speed_sd = st.slider('WIND_SPEED', 0, 23, 10)
 wind_speed = 6

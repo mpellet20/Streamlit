@@ -8,15 +8,6 @@ def load_data(nrows):
     wind_data = pd.read_csv('WTG01.csv', nrows=nrows)
     return wind_data
 
-#wind_data = load_data(10000)
-#wind_speed = st.slider('WIND_SPEED', 0, 13, 2)
-#wind_data['WIND_SPEED'] = wind_speed
-
-
-
-#wind_data = wind_data.wind_speed == wind_speed]
-
-#, names=['Date', 'Time', 'AC_POWER', 'WIND_SPEED'])
 wind_data = load_data(3170)
 
 chart_data = wind_data.groupby('WIND_SPEED').AC_POWER.sum()
@@ -26,15 +17,11 @@ st.title('Here is the graphic of the AC_POWER related to the wind speed')
 st.line_chart(chart_data)
 
 if st.checkbox('Show Raw Data'):
+    wind_data = load_data(10000)
+    wind_speed = st.slider('WIND_SPEED', 0, 12, 1)
+    wind_data['WIND_SPEED'] = wind_speed
+    
     st.title('Data on Wind Power and Wind speed')
     st.write("Here's the data table: ")
     st.write(wind_data)
-
-#st.write('Here is the table of the Wind Speed related to the Wind Power')
-
-#st.write(wind_data.groupby('AC_POWER').WIND_SPEED.sum())
-
-#st.write('Here is the table of the wind speed related to the date')
-
-#st.write(wind_data.groupby('Date').WIND_SPEED.sum())
 

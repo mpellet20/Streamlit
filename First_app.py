@@ -10,7 +10,14 @@ def load_data(nrows):
 
 wind_data = load_data(3170)
 
+col1, col2 = st.beta_columns([3, 1])
 chart_data = wind_data.groupby('WIND_SPEED').AC_POWER.sum()
+
+col1.subheader("Here is the graphic of the AC_POWER related to the wind speed")
+st.line_chart(chart_data)
+
+col2.subheader("Data on Wind Power and Wind speed")
+col2.write(wind_data)
 
 st.title('Here is the graphic of the AC_POWER related to the wind speed')
 

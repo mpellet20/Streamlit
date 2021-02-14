@@ -14,7 +14,7 @@ col1, col2 = st.beta_columns([2, 3])
 chart_data = wind_data.groupby('WIND_SPEED').AC_POWER.sum()
 
 col1.subheader("Here is the graphic of the AC_POWER related to the wind speed")
-st.plot_chart(chart_data)
+st.dot_chart(chart_data)
 
 col2.subheader("Data on Wind Power and Wind speed")
 col2.write(wind_data)

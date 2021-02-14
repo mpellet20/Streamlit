@@ -2,6 +2,12 @@ import streamlit as st
 
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 10, 30)
+y = np.sin(x)
+
+plt.plot(x, y, 'o', color='black');
 
 #@st.cache(persist=TRUE)
 def load_data(nrows):
